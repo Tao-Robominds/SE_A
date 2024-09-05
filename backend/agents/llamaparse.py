@@ -11,11 +11,11 @@ class LlamaParseAgent:
         self.request = request
         self.parser = LlamaParse(
             result_type="markdown",
-            language="en",
+            language="ch_sim",
             use_vendor_multimodal_model=True,
             vendor_multimodal_model_name="openai-gpt-4o-mini",
             vendor_multimodal_api_key=os.getenv("OPENAI_API_KEY"),
-            parsing_instruction = "Read the file and extract the content in markdown format."
+            parsing_instruction = """准确提取文档表格结构及所有内容。"""
         )
 
     def actor(self):
