@@ -18,7 +18,7 @@ class LlamaParseAgent:
             parsing_instruction = """准确提取文档表格结构及所有内容。"""
         )
 
-    def actor(self):
+    async def actor(self):
         content = self.parser.load_data(self.request)
         response = content[0].text
     

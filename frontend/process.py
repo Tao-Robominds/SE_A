@@ -8,7 +8,7 @@ import tempfile
 import sys
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, project_root)
-from backend.agents.llamaparse import LlamaParseAgent
+from backend.agents.llama_parse import LlamaParseAgent
 
 def main():
     # Custom CSS to set sidebar width

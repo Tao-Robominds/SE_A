@@ -2,15 +2,15 @@ import warnings
 warnings.filterwarnings("ignore")
 
 from pytest import mark
-from backend.agents.ocr_moonshot import OCRAgent as Agent
+from backend.agents.ocr_parse import OCRAgent as Agent
 
 
 @mark.asyncio
 @mark.agent
-@mark.ocr
+@mark.ocr_parse
 class AgentTests:
     async def test_agent_behaviours(self):
-        request = """backend/data/projects/bot/pdf/数字品控.pdf"""
+        request = """backend/data/projects/bot/img/数字品控/数字品控-06.jpg"""
         agent_instance = Agent(request)
         result = await agent_instance.actor()
         print(result)
